@@ -72,6 +72,8 @@
     numberView3.addTitleColorNormal = [UIColor brownColor];
     numberView3.addTitleColorHighlight = [UIColor blueColor];
     // 数量
+    numberView3.number = 10;
+    numberView3.numberMax = 300;
     numberView3.numberEdit = ^(NSInteger number){
         NSLog(@"3 number = %@", @(number));
     };

@@ -264,6 +264,7 @@ static NSString *const limitNumberText = @"0123456789";
         _textField.backgroundColor = [UIColor clearColor];
         _textField.font = _textFont;
         _textField.textColor = _textColor;
+        _textField.text = @"0";
         _textField.textAlignment = NSTextAlignmentCenter;
         _textField.returnKeyType = UIReturnKeyDone;
         _textField.delegate = self;
