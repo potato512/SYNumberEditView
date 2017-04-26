@@ -1,6 +1,11 @@
 # SYNumberEditView
 数量编辑视图控件（如购物车中商品数量的增减）
 
+* 特别说明：
+  * 1 限制只能输入0~9的阿拉伯数字
+  * 2 首位字符输入不能为0，即必须大于0
+
+
 # 效果图
 
 ![NumberEdit.gif](./images/NumberEdit.gif)
