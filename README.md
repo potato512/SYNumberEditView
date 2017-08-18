@@ -12,25 +12,30 @@
 
 # 代码示例
 ~~~ javascript
+
 #import "SYNumberEditView.h"
 
 SYNumberEditView *numberView = [[SYNumberEditView alloc] initWithFrame:CGRectMake(10.0, 10.0, 80.0, 30.0)];
 [self.view addSubview:numberView];
 numberView.tag = 1000;
 numberView.backgroundColor = [UIColor whiteColor];
+
 // 按钮
 numberView.reduceImageNormal = [UIImage imageNamed:@"reduceCircle_Normal"];
 numberView.reduceImageHighlight = [UIImage imageNamed:@"reduceCircle_Highlight"];
 numberView.addImageNormal = [UIImage imageNamed:@"addCircle_Normal"];
 numberView.addImageHighlight = [UIImage imageNamed:@"addCircle_Highlight"];
+
 // 字体
 numberView.textColor = [UIColor redColor];
 numberView.textFont = [UIFont boldSystemFontOfSize:14.0];
+
 // 数量
 numberView.numberMax = 20;
 numberView.numberEdit = ^(NSInteger number){
     NSLog(@"1 number = %@", @(number));
 };
+
 // 边框
 numberView.borderShow = YES;
 numberView.borderColor = [UIColor redColor];
@@ -45,3 +50,11 @@ numberView.borderCornerRadius = 5.0;
     NSLog(@"2 number = %@", @(numberView.number));
 }
 ~~~
+
+#### 修改完善
+* 20170818
+  * 版本号：1.0.0
+  * 添加属性button，便于设置处理
+
+
+

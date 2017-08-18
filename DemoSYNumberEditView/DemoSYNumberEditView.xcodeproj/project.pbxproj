@@ -15,7 +15,6 @@
 		A78E9D271EAF2124003D1949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D251EAF2124003D1949 /* LaunchScreen.storyboard */; };
 		A78E9D321EAF2124003D1949 /* DemoSYNumberEditViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D311EAF2124003D1949 /* DemoSYNumberEditViewTests.m */; };
 		A78E9D3D1EAF2124003D1949 /* DemoSYNumberEditViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D3C1EAF2124003D1949 /* DemoSYNumberEditViewUITests.m */; };
-		A78E9D4E1EAF21BD003D1949 /* SYNumberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D4D1EAF21BD003D1949 /* SYNumberEditView.m */; };
 		A78E9D5C1EAF2CF2003D1949 /* addCircle_Highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D501EAF2CF2003D1949 /* addCircle_Highlight.png */; };
 		A78E9D5D1EAF2CF2003D1949 /* addCircle_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D511EAF2CF2003D1949 /* addCircle_Normal.png */; };
 		A78E9D5E1EAF2CF2003D1949 /* addDirection_Highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D521EAF2CF2003D1949 /* addDirection_Highlight.png */; };
@@ -28,6 +27,7 @@
 		A78E9D651EAF2CF2003D1949 /* reduceDirection_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D591EAF2CF2003D1949 /* reduceDirection_Normal.png */; };
 		A78E9D661EAF2CF2003D1949 /* reduceSymbol_Highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D5A1EAF2CF2003D1949 /* reduceSymbol_Highlight.png */; };
 		A78E9D671EAF2CF2003D1949 /* reduceSymbol_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D5B1EAF2CF2003D1949 /* reduceSymbol_Normal.png */; };
+		A7F36B261F46D25B00D5317D /* SYNumberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F36B251F46D25B00D5317D /* SYNumberEditView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +64,6 @@
 		A78E9D381EAF2124003D1949 /* DemoSYNumberEditViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoSYNumberEditViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78E9D3C1EAF2124003D1949 /* DemoSYNumberEditViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSYNumberEditViewUITests.m; sourceTree = "<group>"; };
 		A78E9D3E1EAF2124003D1949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A78E9D4C1EAF21BD003D1949 /* SYNumberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNumberEditView.h; sourceTree = "<group>"; };
-		A78E9D4D1EAF21BD003D1949 /* SYNumberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNumberEditView.m; sourceTree = "<group>"; };
 		A78E9D501EAF2CF2003D1949 /* addCircle_Highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCircle_Highlight.png; sourceTree = "<group>"; };
 		A78E9D511EAF2CF2003D1949 /* addCircle_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCircle_Normal.png; sourceTree = "<group>"; };
 		A78E9D521EAF2CF2003D1949 /* addDirection_Highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addDirection_Highlight.png; sourceTree = "<group>"; };
@@ -78,6 +76,8 @@
 		A78E9D591EAF2CF2003D1949 /* reduceDirection_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reduceDirection_Normal.png; sourceTree = "<group>"; };
 		A78E9D5A1EAF2CF2003D1949 /* reduceSymbol_Highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reduceSymbol_Highlight.png; sourceTree = "<group>"; };
 		A78E9D5B1EAF2CF2003D1949 /* reduceSymbol_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reduceSymbol_Normal.png; sourceTree = "<group>"; };
+		A7F36B241F46D25B00D5317D /* SYNumberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNumberEditView.h; sourceTree = "<group>"; };
+		A7F36B251F46D25B00D5317D /* SYNumberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNumberEditView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 				A78E9D1B1EAF2123003D1949 /* AppDelegate.m */,
 				A78E9D1D1EAF2123003D1949 /* ViewController.h */,
 				A78E9D1E1EAF2123003D1949 /* ViewController.m */,
+				A7F36B231F46D25B00D5317D /* SYNumberEditView */,
 				A78E9D4F1EAF2CF2003D1949 /* images */,
-				A78E9D4B1EAF21AE003D1949 /* SYNumberEditView */,
 				A78E9D171EAF2123003D1949 /* Supporting Files */,
 			);
 			path = DemoSYNumberEditView;
@@ -169,15 +169,6 @@
 			path = DemoSYNumberEditViewUITests;
 			sourceTree = "<group>";
 		};
-		A78E9D4B1EAF21AE003D1949 /* SYNumberEditView */ = {
-			isa = PBXGroup;
-			children = (
-				A78E9D4C1EAF21BD003D1949 /* SYNumberEditView.h */,
-				A78E9D4D1EAF21BD003D1949 /* SYNumberEditView.m */,
-			);
-			path = SYNumberEditView;
-			sourceTree = "<group>";
-		};
 		A78E9D4F1EAF2CF2003D1949 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +186,16 @@
 				A78E9D5B1EAF2CF2003D1949 /* reduceSymbol_Normal.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		A7F36B231F46D25B00D5317D /* SYNumberEditView */ = {
+			isa = PBXGroup;
+			children = (
+				A7F36B241F46D25B00D5317D /* SYNumberEditView.h */,
+				A7F36B251F46D25B00D5317D /* SYNumberEditView.m */,
+			);
+			name = SYNumberEditView;
+			path = ../../SYNumberEditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +343,7 @@
 				A78E9D1F1EAF2123003D1949 /* ViewController.m in Sources */,
 				A78E9D1C1EAF2123003D1949 /* AppDelegate.m in Sources */,
 				A78E9D191EAF2123003D1949 /* main.m in Sources */,
-				A78E9D4E1EAF21BD003D1949 /* SYNumberEditView.m in Sources */,
+				A7F36B261F46D25B00D5317D /* SYNumberEditView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +569,7 @@
 				A78E9D431EAF2124003D1949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A78E9D441EAF2124003D1949 /* Build configuration list for PBXNativeTarget "DemoSYNumberEditViewTests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +578,7 @@
 				A78E9D461EAF2124003D1949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A78E9D471EAF2124003D1949 /* Build configuration list for PBXNativeTarget "DemoSYNumberEditViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +587,7 @@
 				A78E9D491EAF2124003D1949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

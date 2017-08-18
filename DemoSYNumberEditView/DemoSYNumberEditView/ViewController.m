@@ -26,8 +26,12 @@
     numberView.tag = 1000;
     numberView.backgroundColor = [UIColor whiteColor];
     // 按钮
+    // 减
+    numberView.reduceButton.backgroundColor = [UIColor orangeColor];
     numberView.reduceImageNormal = [UIImage imageNamed:@"reduceCircle_Normal"];
     numberView.reduceImageHighlight = [UIImage imageNamed:@"reduceCircle_Highlight"];
+    // 加
+    numberView.addButton.backgroundColor = [UIColor yellowColor];
     numberView.addImageNormal = [UIImage imageNamed:@"addCircle_Normal"];
     numberView.addImageHighlight = [UIImage imageNamed:@"addCircle_Highlight"];
     // 字体
@@ -42,7 +46,7 @@
     numberView.borderShow = YES;
     numberView.borderColor = [UIColor redColor];
     numberView.borderWidth = 2.0;
-    numberView.borderCornerRadius = 5.0;
+    numberView.borderCornerRadius = 10.0;
     
     
     SYNumberEditView *numberView2 = [[SYNumberEditView alloc] init];

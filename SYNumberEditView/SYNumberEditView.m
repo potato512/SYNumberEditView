@@ -97,11 +97,43 @@ static NSString *const limitNumberText = @"0123456789";
 
 - (void)setUI
 {
+    self.buttonReduce = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:self.buttonReduce];
+    self.buttonReduce.backgroundColor = [UIColor clearColor];
+    [self.buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateNormal];
+    [self.buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateHighlighted];
+    [self.buttonReduce setTitleColor:_reduceTitleColorNormal forState:UIControlStateNormal];
+    [self.buttonReduce setTitleColor:_reduceTitleColorHighlight forState:UIControlStateHighlighted];
+    self.buttonReduce.titleLabel.font = _reduceFont;
+    [self.buttonReduce addTarget:self action:@selector(buttonReduceClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.textField = [[UITextField alloc] init];
     [self addSubview:self.textField];
+    self.textField.backgroundColor = [UIColor clearColor];
+    self.textField.font = _textFont;
+    self.textField.textColor = _textColor;
+    self.textField.text = @"0";
+    self.textField.textAlignment = NSTextAlignmentCenter;
+    self.textField.returnKeyType = UIReturnKeyDone;
+    self.textField.delegate = self;
+    
+    self.buttonAddMore = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:self.buttonAddMore];
+    self.buttonAddMore.backgroundColor = [UIColor clearColor];
+    [self.buttonAddMore setTitle:_addTitleNormal forState:UIControlStateNormal];
+    [self.buttonAddMore setTitle:_addTitleNormal forState:UIControlStateHighlighted];
+    [self.buttonAddMore setTitleColor:_addTitleColorNormal forState:UIControlStateNormal];
+    [self.buttonAddMore setTitleColor:_addTitleColorHighlight forState:UIControlStateHighlighted];
+    self.buttonAddMore.titleLabel.font = _addFont;
+    [self.buttonAddMore addTarget:self action:@selector(buttonAddMoreClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.lineLeft = [[UIView alloc] init];
     [self.buttonReduce addSubview:self.lineLeft];
+    self.lineLeft.backgroundColor = _borderColor;
+    
+    self.lineRight = [[UIView alloc] init];
     [self.buttonAddMore addSubview:self.lineRight];
+    self.lineRight.backgroundColor = _borderColor;
 
     // 初始化
     self.lineLeft.hidden = !_borderShow;
@@ -224,72 +256,14 @@ static NSString *const limitNumberText = @"0123456789";
 
 #pragma mark - getter
 
-- (UIButton *)buttonReduce
+- (UIButton *)reduceButton
 {
-    if (_buttonReduce == nil)
-    {
-        _buttonReduce = [UIButton buttonWithType:UIButtonTypeCustom];
-        _buttonReduce.backgroundColor = [UIColor clearColor];
-        [_buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateNormal];
-        [_buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateHighlighted];
-        [_buttonReduce setTitleColor:_reduceTitleColorNormal forState:UIControlStateNormal];
-        [_buttonReduce setTitleColor:_reduceTitleColorHighlight forState:UIControlStateHighlighted];
-        _buttonReduce.titleLabel.font = _reduceFont;
-        [_buttonReduce addTarget:self action:@selector(buttonReduceClick) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _buttonReduce;
+    return self.buttonReduce;
 }
 
-- (UIButton *)buttonAddMore
+- (UIButton *)addButton
 {
-    if (_buttonAddMore == nil)
-    {
-        _buttonAddMore = [UIButton buttonWithType:UIButtonTypeCustom];
-        _buttonAddMore.backgroundColor = [UIColor clearColor];
-        [_buttonAddMore setTitle:_addTitleNormal forState:UIControlStateNormal];
-        [_buttonAddMore setTitle:_addTitleNormal forState:UIControlStateHighlighted];
-        [_buttonAddMore setTitleColor:_addTitleColorNormal forState:UIControlStateNormal];
-        [_buttonAddMore setTitleColor:_addTitleColorHighlight forState:UIControlStateHighlighted];
-        _buttonAddMore.titleLabel.font = _addFont;
-        [_buttonAddMore addTarget:self action:@selector(buttonAddMoreClick) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _buttonAddMore;
-}
-
-- (UITextField *)textField
-{
-    if (_textField == nil)
-    {
-        _textField = [[UITextField alloc] init];
-        _textField.backgroundColor = [UIColor clearColor];
-        _textField.font = _textFont;
-        _textField.textColor = _textColor;
-        _textField.text = @"0";
-        _textField.textAlignment = NSTextAlignmentCenter;
-        _textField.returnKeyType = UIReturnKeyDone;
-        _textField.delegate = self;
-    }
-    return _textField;
-}
-
-- (UIView *)lineLeft
-{
-    if (_lineLeft == nil)
-    {
-        _lineLeft = [[UIView alloc] init];
-        _lineLeft.backgroundColor = _borderColor;
-    }
-    return _lineLeft;
-}
-
-- (UIView *)lineRight
-{
-    if (_lineRight == nil)
-    {
-        _lineRight = [[UIView alloc] init];
-        _lineRight.backgroundColor = _borderColor;
-    }
-    return _lineRight;
+    return self.buttonAddMore;
 }
 
 #pragma mark - setter

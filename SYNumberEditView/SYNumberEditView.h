@@ -10,6 +10,8 @@
 
 @interface SYNumberEditView : UIView
 
+/// 减少按钮
+@property (nonatomic, strong) UIButton *reduceButton;
 /// 减少图标（默认无）
 @property (nonatomic, strong) UIImage *reduceImageNormal;
 /// 减少高亮图标（默认无）
@@ -25,6 +27,8 @@
 /// 减少按钮字体高亮颜色（默认黑色）
 @property (nonatomic, strong) UIColor *reduceTitleColorHighlight;
 
+/// 增加按钮
+@property (nonatomic, strong) UIButton *addButton;
 /// 增加图标（默认无）
 @property (nonatomic, strong) UIImage *addImageNormal;
 /// 增加高亮图标（默认无）
